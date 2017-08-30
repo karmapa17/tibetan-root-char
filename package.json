@@ -1,0 +1,14 @@
+{
+  "name": "tibetan-root-char",
+  "version": "0.0.0",
+  "description": "Fetch a root character by input string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "kmsheng,chiehan1",
+  "license": "MIT",
+  "dependencies": {
+    "tibetan-tokenize": "0.0.5"
+  }
+}
