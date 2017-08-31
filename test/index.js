@@ -20,11 +20,11 @@ test('Rule 2-2 - The root character of ལྷ (\\u0f63\\u0fb7) is ཧ (\\u0f67)'
   t.is(getRootChar('ལྷ'), 'ཧ');
 });
 
-test('Rule 3 - Root character is before subscript like གླང contains a root character ག', (t) => {
+test('Rule 3 - Root character ག is before subscript. For example, གླང', (t) => {
   t.is(getRootChar('གླང'), 'ག');
 });
 
-test('Rule 3 - Root character is before vowol like སུ contains a root character ས', (t) => {
+test('Rule 3 - Root character ས is before vowol. For example, སུ', (t) => {
   t.is(getRootChar('སུ'), 'ས');
 });
 
