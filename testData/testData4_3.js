@@ -10,4 +10,4 @@ const answers4_3 = [
   'མ'
 ];
 
-module.exports = {testStrs4_3: testStrs4_3, answers4_3: answers4_3};
+module.exports = [testStrs4_3, answers4_3];

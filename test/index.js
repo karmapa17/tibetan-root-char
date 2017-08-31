@@ -1,10 +1,38 @@
 const test = require('ava');
-const {testStrs4_1, answers4_1} = require('./../testData/testData4_1');
+const testData4_1 = require('./../testData/testData4_1');
 const tripleCharArr = require('./../src/tripleCharArr');
-const {testStrs4_3, answers4_3} = require('./../testData/testData4_3');
-const {testStrs4_4, answers4_4} = require('./../testData/testData4_4');
+const answers4_2 = require('./../testData/testData4_2');
+const testData4_3 = require('./../testData/testData4_3');
+const testData4_4 = require('./../testData/testData4_4');
+
 const {getRootChar} = require('./../src/');
 
+[
+  [
+    'Rule 4-1 - Quadruple consonants, 2nd character should be root.',
+    ...testData4_1
+  ],
+  [
+    'Rule 4-2 = A part of triple consonants with secondary suffix ས, 1st character should be root.', tripleCharArr, answers4_2
+  ],
+  [
+    'Rule 4-3 - Normal triple consonants, 2nd character should be root.',
+    ...testData4_3
+  ],
+  [
+    'Rule 4-4 - Double consonants, 1st character should be root.',
+    ...testData4_4
+  ]
+].map((testData) => ruleTest.apply(null, testData));
+
+function ruleTest(rule, testStrs, answers) {
+  test(rule, (t) => {
+    const res = testStrs.map((str) => getRootChar(str));
+    t.deepEqual(res, answers);
+  });
+}
+
+/*
 test('Rule 1 - ཕྱི་དྲོ་བདེ་ལེགས། should have a root character ཕ', (t) => {
   // "Good afternoon" in Tibetan
   t.is(getRootChar('ཕྱི་དྲོ་བདེ་ལེགས།'), 'ཕ');
@@ -30,23 +58,4 @@ test('Rule 3 - Root character ག is before subscript. For example, གླང', 
 test('Rule 3 - Root character ས is before vowol. For example, སུ', (t) => {
   t.is(getRootChar('སུ'), 'ས');
 });
-
-test('Rule 4-1', (t) => {
-  const res = testStrs4_1.map((str) => getRootChar(str));
-  t.deepEqual(res, answers4_1);
-});
-
-test('Rule 4-2', (t) => {
-  const res = tripleCharArr.map((tripleChars) => getRootChar(tripleChars));
-  t.deepEqual(res, ['ག', 'ན', 'ན', 'ན', 'བ', 'བ', 'བ', 'ར', 'ར', 'ར', 'ར', 'ལ', 'ལ', 'ལ', 'ས']);
-})
-
-test('Rule 4-3', (t) => {
-  const res = testStrs4_3.map((str) => getRootChar(str));
-  t.deepEqual(res, answers4_3);
-});
-
-test('Rule 4-4', (t) => {
-  const res = testStrs4_4.map((str) => getRootChar(str));
-  t.deepEqual(res, answers4_4);
-});
+*/

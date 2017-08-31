@@ -24,4 +24,4 @@ const answers4_4 = [
   'ས'
 ];
 
-module.exports = {testStrs4_4: testStrs4_4, answers4_4: answers4_4};
+module.exports = [testStrs4_4, answers4_4];
