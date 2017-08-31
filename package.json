@@ -1,6 +1,6 @@
 {
   "name": "tibetan-root-char",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fetch a root character by input string.",
   "main": "src/index.js",
   "scripts": {
