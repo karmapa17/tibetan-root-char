@@ -17,7 +17,7 @@ $ npm install tibetan-root-char
 
 ```js
 const {getRootChar} = require('tibetan-root-char');
-// Good afternoon ! 
+// Good afternoon !
 getRootChar('ཕྱི་དྲོ་བདེ་ལེགས།');    // ཕ
 ```
 
