@@ -1,4 +1,4 @@
-module.exports = [
+const testStrs4_1 = [
   "དངགས།",
   "གདངས་འདུར།",
   "བདམས་ཐོན།",
@@ -13,3 +13,21 @@ module.exports = [
   "གསགས་ཀ།",
   "བསམས་པ།"
 ];
+
+const answers4_1 = [
+  "ང",
+  "ད",
+  "ད",
+  "ད",
+  "ད",
+  "ན",
+  "ན",
+  "བ",
+  "བ",
+  "བ",
+  "མ",
+  "ས",
+  "ས"
+];
+
+module.exports = {testStrs4_1: testStrs4_1, answers4_1: answers4_1};
