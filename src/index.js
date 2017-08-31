@@ -70,7 +70,7 @@ function getTibetanRootChar(str) {
 
   // rule 4-4
   // rule 4-5
-  if ((2 === matchedIndicesLength) || (1 === matchedIndices)) {
+  if ((2 === matchedIndicesLength) || (1 === matchedIndicesLength)) {
     return chars[matchedIndices[0]];
   }
   return null;
