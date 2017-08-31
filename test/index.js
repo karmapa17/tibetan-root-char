@@ -20,6 +20,10 @@ test('Rule 3 - Root character is before subscript like གླང contains a root
   t.is(getRootChar('གླང'), 'ག');
 });
 
+test('Rule 3 - Root character is before vowol like སུ contains a root character ས', (t) => {
+  t.is(getRootChar('སུ'), 'ས');
+});
+
 test('Rule 4-2', (t) => {
   const res = tripleCharArr.map((tripleChars) => getRootChar(tripleChars));
   t.deepEqual(res, ['ག', 'ན', 'ན', 'ན', 'བ', 'བ', 'བ', 'ར', 'ར', 'ར', 'ར', 'ལ', 'ལ', 'ལ', 'ས']);
