@@ -1,7 +1,7 @@
 const test = require('ava');
-const testStrs4_1 = require('./../testData/testStrs4_1');
-const answers4_1 = require('./../testData/answers4_1');
+const {testStrs4_1, answers4_1} = require('./../testData/testData4_1');
 const tripleCharArr = require('./../src/tripleCharArr');
+const {testStrs4_3, answers4_3} = require('./../testData/testData4_3');
 const {getRootChar} = require('./../src/');
 
 test('Rule 1 - ཕྱི་དྲོ་བདེ་ལེགས། should have a root character ཕ', (t) => {
@@ -39,3 +39,8 @@ test('Rule 4-2', (t) => {
   const res = tripleCharArr.map((tripleChars) => getRootChar(tripleChars));
   t.deepEqual(res, ['ག', 'ན', 'ན', 'ན', 'བ', 'བ', 'བ', 'ར', 'ར', 'ར', 'ར', 'ལ', 'ལ', 'ལ', 'ས']);
 })
+
+test('Rule 4-3', (t) => {
+  const res = testStrs4_3.map((str) => getRootChar(str));
+  t.deepEqual(res, answers4_3);
+});
