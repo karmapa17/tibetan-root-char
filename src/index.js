@@ -22,6 +22,11 @@ function getTibetanRootChar(str) {
     }
   }
 
+  // rule 2-2
+  if ('ལྷ' === token) {
+    return 'ཧ';
+  }
+
   const length = chars.length;
 
   for (let i = 0; i < length; i++) {
