@@ -23,7 +23,7 @@ function getTibetanRootChar(str) {
   }
 
   // rule 2-2
-  if ('ལྷ' === token) {
+  if (/ལྷ/.test(token)) {
     return 'ཧ';
   }
 
