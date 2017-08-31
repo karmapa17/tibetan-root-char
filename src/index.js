@@ -59,17 +59,17 @@ function getTibetanRootChar(str) {
   }
 
   if (3 === matchedIndicesLength) {
-    // 4-2
+    // rule 4-2
     const tripleCharStr = matchedIndices.map((index) => chars[index]).join('');
     if (tripleCharArr.includes(tripleCharStr)) {
       return chars[matchedIndices[0]];
     }
-    // 4-3
+    // rule 4-3
     return chars[matchedIndices[1]];
   }
 
-  // 4-4
-  // 4-5
+  // rule 4-4
+  // rule 4-5
   if ((2 === matchedIndicesLength) || (1 === matchedIndices)) {
     return chars[matchedIndices[0]];
   }
