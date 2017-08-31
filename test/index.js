@@ -16,6 +16,10 @@ test('Rule 2 - ལྷ (\\u0f63\\u0f67) should have a root character ཧ (\\u0f67
   t.is(getRootChar('ལྷ'), 'ཧ');
 });
 
+test('Rule 2-2 - The root character of ལྷ (\\u0f63\\u0fb7) is ཧ (\\u0f67)', (t) => {
+  t.is(getRootChar('ལྷ'), 'ཧ');
+});
+
 test('Rule 3 - Root character is before subscript like གླང contains a root character ག', (t) => {
   t.is(getRootChar('གླང'), 'ག');
 });
