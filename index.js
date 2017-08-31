@@ -1,5 +1,4 @@
 const tokenize = require('tibetan-tokenize');
-const rootChars = require('./rootChars');
 const rootCharMap = require('./rootCharMap');
 const tripleCharArr = require('./tripleCharArr');
 
