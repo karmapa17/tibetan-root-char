@@ -12,3 +12,7 @@ test('Rule 1 - "How are you" in Tebetan', (t) => {
 test('Rule 2 - ལྷ (\\u0f63\\u0f67) should have root character ཧ (\\u0f67)', (t) => {
   t.is(getRootChar('ལྷ'), 'ཧ');
 });
+
+test('Rule3 - Root character is before subscript ླ \\u0fb3', (t) => {
+  t.is(getRootChar('གླང་པོ་ཆེ་པའི་'), 'ག');
+});
