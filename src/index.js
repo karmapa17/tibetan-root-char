@@ -15,7 +15,7 @@ function getTibetanRootChar(str) {
   const chars = token.split('');
 
   for (const char of chars) {
-    const [matchedRule2] = /[ྐྒྔྕྗྙྟྡྣྤྦྨྩྫྷ]/.exec(char) || []
+    const [matchedRule2] = /[\u0f90\u0f92\u0f94\u0f95\u0f97\u0f99\u0f9f\u0fa1\u0fa3\u0fa4\u0fa6\u0fa8\u0fa9\u0fab]/.exec(char) || []
 
     if (matchedRule2) {
       return rootCharMap[matchedRule2];
