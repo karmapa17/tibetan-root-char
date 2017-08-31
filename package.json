@@ -4,7 +4,8 @@
   "description": "Fetch a root character by input string.",
   "main": "src/index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "nyc ava",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "kmsheng,chiehan1",
   "license": "MIT",
