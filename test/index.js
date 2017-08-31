@@ -1,4 +1,5 @@
 const test = require('ava');
+const testData3 = require ('./../testData/testData3');
 const testData4_1 = require('./../testData/testData4_1');
 const tripleCharArr = require('./../src/tripleCharArr');
 const answers4_2 = require('./../testData/testData4_2');
@@ -16,6 +17,10 @@ function ruleTest(ruleDescription, testStrs, answers) {
 }
 
 [
+  [
+    'Rule 3 - Root is before vowels, subscript, special characters.',
+    ...testData3
+  ],
   [
     'Rule 4-1 - Quadruple consonants, 2nd character should be root.',
     ...testData4_1
@@ -54,13 +59,5 @@ test('Rule 2 - ལྷ (\\u0f63\\u0f67) should have a root character ཧ (\\u0f67
 
 test('Rule 2-2 - The root character of ལྷ (\\u0f63\\u0fb7) is ཧ (\\u0f67)', (t) => {
   t.is(getRootChar('ལྷ'), 'ཧ');
-});
-
-test('Rule 3 - Root character ག is before subscript. For example, གླང', (t) => {
-  t.is(getRootChar('གླང'), 'ག');
-});
-
-test('Rule 3 - Root character ས is before vowol. For example, སུ', (t) => {
-  t.is(getRootChar('སུ'), 'ས');
 });
 */
