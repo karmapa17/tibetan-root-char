@@ -1,4 +1,6 @@
 const test = require('ava');
+const testStrs4_1 = require('./../testData/testStrs4_1');
+const answers4_1 = require('./../testData/answers4_1');
 const tripleCharArr = require('./../src/tripleCharArr');
 const {getRootChar} = require('./../src/');
 
@@ -26,6 +28,11 @@ test('Rule 3 - Root character ག is before subscript. For example, གླང', 
 
 test('Rule 3 - Root character ས is before vowol. For example, སུ', (t) => {
   t.is(getRootChar('སུ'), 'ས');
+});
+
+test('Rule 4-1', (t) => {
+  const res = testStrs4_1.map((str) => getRootChar(str));
+  t.deepEqual(res, answers4_1);
 });
 
 test('Rule 4-2', (t) => {
