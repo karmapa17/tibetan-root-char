@@ -1,4 +1,5 @@
 const test = require('ava');
+const testData1 = require('./../testData/testData1');
 const testData3 = require ('./../testData/testData3');
 const testData4_1 = require('./../testData/testData4_1');
 const tripleCharArr = require('./../src/tripleCharArr');
@@ -17,6 +18,14 @@ function ruleTest(ruleDescription, testStrs, answers) {
 }
 
 [
+  [
+    'Rule 1 - Root character can be confirmed at one step match.',
+    ...testData1
+  ],
+//  [
+//    'Rule 2-1 - Root character is behind the superscript character.',
+//    ...testData2_1
+//  ],
   [
     'Rule 2-2 - The root character of ལྷ (\\u0f63\\u0fb7) is ཧ (\\u0f67)',
     ['ལྷའི་རྔ་ཅན།'], ['ཧ']
@@ -46,23 +55,3 @@ function ruleTest(ruleDescription, testStrs, answers) {
     ...testData4_5
   ]
 ].map((testData) => ruleTest.apply(null, testData));
-
-/*
-test('Rule 1 - ཕྱི་དྲོ་བདེ་ལེགས། should have a root character ཕ', (t) => {
-  // "Good afternoon" in Tibetan
-  t.is(getRootChar('ཕྱི་དྲོ་བདེ་ལེགས།'), 'ཕ');
-});
-
-test('Rule 1 - ཁྱེད་རང་སྐུ་གཇུགས་བདེ་པོ་ཡིན་པས། should have a root character ཁ', (t) => {
-  // "How are you" in Tibetan
-  t.is(getRootChar('ཁྱེད་རང་སྐུ་གཇུགས་བདེ་པོ་ཡིན་པས།'), 'ཁ');
-});
-
-test('Rule 2 - ལྷ (\\u0f63\\u0f67) should have a root character ཧ (\\u0f67)', (t) => {
-  t.is(getRootChar('ལྷ'), 'ཧ');
-});
-
-test('Rule 2-2 - The root character of ལྷ (\\u0f63\\u0fb7) is ཧ (\\u0f67)', (t) => {
-  t.is(getRootChar('ལྷ'), 'ཧ');
-});
-*/
