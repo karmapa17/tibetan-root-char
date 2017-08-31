@@ -15,9 +15,10 @@ const testStrs3 = [
   'ནཻ་པཱ་ལ།',
   'འོབས།',
   'སཽ་མ་པུ་རི།',
+//special characters
   'དྷཱི་ཏི་ཀ།',
   'དྷཱུ་ཏི།',
-//fake-sample
+//fake samples
   'གྲྀ',
   'གཷ',
   'གླྀ',
@@ -43,9 +44,10 @@ const answers3 = [
   'ན',
   'འ',
   'ས',
+//special characters
   'ད',
   'ད',
-//fake-sample
+//fake samples
   'ག',
   'ག',
   'ག',

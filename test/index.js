@@ -18,6 +18,10 @@ function ruleTest(ruleDescription, testStrs, answers) {
 
 [
   [
+    'Rule 2-2 - The root character of ལྷ (\\u0f63\\u0fb7) is ཧ (\\u0f67)',
+    ['ལྷའི་རྔ་ཅན།'], ['ཧ']
+  ],
+  [
     'Rule 3 - Root is before vowels, subscript, special characters.',
     ...testData3
   ],
@@ -26,7 +30,8 @@ function ruleTest(ruleDescription, testStrs, answers) {
     ...testData4_1
   ],
   [
-    'Rule 4-2 = A part of triple consonants with secondary suffix ས, 1st character should be root.', tripleCharArr, answers4_2
+    'Rule 4-2 = A part of triple consonants with secondary suffix ས, 1st character should be root.',
+    tripleCharArr, answers4_2
   ],
   [
     'Rule 4-3 - Normal triple consonants, 2nd character should be root.',
