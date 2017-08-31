@@ -11,5 +11,9 @@
   "license": "MIT",
   "dependencies": {
     "tibetan-tokenize": "0.0.5"
+  },
+  "devDependencies": {
+    "ava": "0.22.0",
+    "nyc": "11.1.0"
   }
 }
