@@ -55,4 +55,4 @@ function ruleTest(ruleDescription, testStrs, answers) {
     'Rule 4-5 - Single consonant that can also be prefix or suffix, is the root.',
     ...testData4_5
   ]
-].map((testData) => ruleTest.apply(null, testData));
+].forEach((testData) => ruleTest(...testData));
