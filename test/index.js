@@ -1,15 +1,14 @@
 const test = require('ava');
-const testData1 = require('./../testData/testData1');
-const testData2_1 = require('./../testData/testData2_1');
-const testData3 = require ('./../testData/testData3');
-const testData4_1 = require('./../testData/testData4_1');
 const tripleCharArr = require('./../src/tripleCharArr');
-const answers4_2 = require('./../testData/testData4_2');
-const testData4_3 = require('./../testData/testData4_3');
-const testData4_4 = require('./../testData/testData4_4');
-const testData4_5 = require('./../testData/testData4_5');
-
 const {getRootChar} = require('./../src/');
+const testData1 = require('./helpers/testData/testData1');
+const testData2_1 = require('./helpers/testData/testData2_1');
+const testData3 = require ('./helpers/testData/testData3');
+const testData4_1 = require('./helpers/testData/testData4_1');
+const answers4_2 = require('./helpers/testData/testData4_2');
+const testData4_3 = require('./helpers/testData/testData4_3');
+const testData4_4 = require('./helpers/testData/testData4_4');
+const testData4_5 = require('./helpers/testData/testData4_5');
 
 function testRule(ruleDescription, testStrs, answers) {
   test(ruleDescription, (t) => {
