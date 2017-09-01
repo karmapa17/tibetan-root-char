@@ -11,7 +11,7 @@ const testData4_5 = require('./../testData/testData4_5');
 
 const {getRootChar} = require('./../src/');
 
-function ruleTest(ruleDescription, testStrs, answers) {
+function testRule(ruleDescription, testStrs, answers) {
   test(ruleDescription, (t) => {
     const res = testStrs.map((str) => getRootChar(str));
     t.deepEqual(res, answers);
@@ -55,4 +55,4 @@ function ruleTest(ruleDescription, testStrs, answers) {
     'Rule 4-5 - Single consonant that can also be prefix or suffix, is the root.',
     ...testData4_5
   ]
-].forEach((testData) => ruleTest(...testData));
+].forEach((testData) => testRule(...testData));
