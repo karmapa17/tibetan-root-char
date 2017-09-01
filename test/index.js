@@ -40,7 +40,7 @@ function ruleTest(ruleDescription, testStrs, answers) {
     ...testData4_1
   ],
   [
-    'Rule 4-2 = A part of triple consonants with secondary suffix ས, 1st character should be root.',
+    'Rule 4-2 = Part of triple consonants with secondary suffix ས, 1st character should be root.',
     tripleCharArr, answers4_2
   ],
   [
