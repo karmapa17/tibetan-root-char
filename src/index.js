@@ -18,7 +18,7 @@ function getTibetanRootChar(str) {
       return sansCharMap[matchedSansRule1];
     }
 
-    const [matchedSansRule2] = /[ཀཁགངཅཆཇཉཊཋཌཎཏཐདནཔཕབམཙཚཛཝཞཟའཡརལཤཥསཧཨ\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69]/.exec(token) || [];
+    const [matchedSansRule2] = /[\u0f40-\u0f69]/.exec(token) || [];
 
     if (matchedSansRule2) {
       return matchedSansRule2;
