@@ -4,7 +4,9 @@ const tripleCharArr = require('./tripleCharArr');
 
 function getTibetanRootChar(str) {
 
-  const {tokens: [token]} = tokenize(str);
+  const dePrefixStr = str.replace(/^(འཕགས་(པ|བ)|དཔལ(?!་གྱི)(་ལྡན)?)་/, '');
+
+  const {tokens: [token]} = tokenize(dePrefixStr);
 
   const [matchedRule1] = /[ཀཁཅཆཇཉཏཐཔཕཙཚཛཝཞཟཡཤཧཨ]/.exec(token) || [];
 
