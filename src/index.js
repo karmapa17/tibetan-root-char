@@ -8,6 +8,12 @@ function getTibetanRootChar(str) {
 
   const {tokens: [token]} = tokenize(dePrefixStr);
 
+  if (/[ཊྚཋྛཌྜཎྞཥྵ]|ངྱ|གྶ|ནྡ|དྨ|ཙྪ|མྦ/.test(token)) {
+    const [matchedSansRule1] = /[ཀཁགངཅཆཇཉཊཋཌཎཏཐདནཔཕབམཙཚཛཝཞཟའཡརལཤཥསཧཨ]/.exec(token) || [];
+
+    return matchedSansRule1;
+  }
+
   const [matchedRule1] = /[ཀཁཅཆཇཉཏཐཔཕཙཚཛཝཞཟཡཤཧཨ]/.exec(token) || [];
 
   if (matchedRule1) {
