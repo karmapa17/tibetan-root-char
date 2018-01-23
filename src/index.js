@@ -1,6 +1,7 @@
 const tokenize = require('tibetan-tokenize');
 const rootCharMap = require('./rootCharMap');
 const tripleCharArr = require('./tripleCharArr');
+const sansCharMap = require('./sansCharMap');
 
 function getTibetanRootChar(str) {
 
@@ -8,16 +9,22 @@ function getTibetanRootChar(str) {
 
   const {tokens: [token]} = tokenize(dePrefixStr);
 
-  if (/[ཊྚཋྛཌྜཎྞཥྵ]|ངྱ|གྶ|ནྡ|དྨ|ཙྪ|མྦ/.test(token)) {
-    const [matchedSansRule1] = /[ཀཁགངཅཆཇཉཊཋཌཎཏཐདནཔཕབམཙཚཛཝཞཟའཡརལཤཥསཧཨ]/.exec(token) || [];
+  if (/[ཊྚཋྛཌྜཎྞཥྵ\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9]|(ངྱ)|(གྶ)|(ནྡ)|(དྨ)|(ཙྪ)|(མྦ)|([གཌདབཛ]ྷ)|(ཀྵ)|(ྒྷ)|(ྜྷ)|(ྡྷ)|(ྦྷ)|(ྫྷ)|(ྐྵ)/.test(token)) {
+    const [matchedSansRule1] = /^([གཌདབཛ]ྷ)|(ཀྵ)/.exec(token) || [];
 
-    return matchedSansRule1;
+    if (matchedSansRule1) {
+      return sansCharMap[matchedSansRule1];
+    }
+
+    const [matchedSansRule2] = /[ཀཁགངཅཆཇཉཊཋཌཎཏཐདནཔཕབམཙཚཛཝཞཟའཡརལཤཥསཧཨ\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69]/.exec(token) || [];
+
+    return matchedSansRule2;
   }
 
   const [matchedRule1] = /[ཀཁཅཆཇཉཏཐཔཕཙཚཛཝཞཟཡཤཧཨ]/.exec(token) || [];
 
   if (matchedRule1) {
-    return matchedRule1
+    return matchedRule1;
   }
 
   const chars = token.split('');
