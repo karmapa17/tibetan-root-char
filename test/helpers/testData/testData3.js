@@ -45,8 +45,8 @@ const answers3 = [
   'འ',
   'ས',
 //special characters
-  'ད',
-  'ད',
+  '\u0f52',
+  '\u0f52',
 //fake samples
   'ག',
   'ག',
