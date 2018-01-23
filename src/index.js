@@ -3,13 +3,15 @@ const rootCharMap = require('./rootCharMap');
 const tripleCharArr = require('./tripleCharArr');
 const sansCharMap = require('./sansCharMap');
 
+const sansFeature = /[ཊྚཋྛཌྜཎྞཥྵ\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9ཱྰ\u0f73\u0f75-\u0f79\u0f7b\u0f7d-\u0f83ྶྺ]|(ངྱ)|(གྶ)|(ནྡ)|(དྨ)|(ཙྪ)|(མྦ)|([གཌདབཛ]ྷ)|(ཀྵ)|(ྒྷ)|(ྜྷ)|(ྡྷ)|(ྦྷ)|(ྫྷ)|(ྐྵ)/;
+
 function getTibetanRootChar(str) {
 
   const dePrefixStr = str.replace(/^(འཕགས་(པ|བ)|དཔལ(?!་གྱི)(་ལྡན)?)་/, '');
 
   const {tokens: [token]} = tokenize(dePrefixStr);
 
-  if (/[ཊྚཋྛཌྜཎྞཥྵ\u0f43\u0f4d\u0f52\u0f57\u0f5c\u0f69\u0f93\u0f9d\u0fa2\u0fa7\u0fac\u0fb9ཱྰ\u0f73\u0f75-\u0f79\u0f7b\u0f7d-\u0f83ྶྺ]|(ངྱ)|(གྶ)|(ནྡ)|(དྨ)|(ཙྪ)|(མྦ)|([གཌདབཛ]ྷ)|(ཀྵ)|(ྒྷ)|(ྜྷ)|(ྡྷ)|(ྦྷ)|(ྫྷ)|(ྐྵ)/.test(token)) {
+  if (sansFeature.test(token)) {
     const [matchedSansRule1] = /^([གཌདབཛ]ྷ)|^(ཀྵ)/.exec(token) || [];
 
     if (matchedSansRule1) {
