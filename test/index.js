@@ -1,6 +1,8 @@
 const test = require('ava');
 const tripleCharArr = require('./../src/tripleCharArr');
 const {getRootChar} = require('./../src/');
+const testSans1 = require('./helpers/testData/testSans1');
+const testSans2 = require('./helpers/testData/testSans2');
 const testData1 = require('./helpers/testData/testData1');
 const testData2_1 = require('./helpers/testData/testData2_1');
 const testData3 = require ('./helpers/testData/testData3');
@@ -18,6 +20,14 @@ function testRule(ruleDescription, testStrs, answers) {
 }
 
 [
+  [
+    'Sanskrit Rule 1',
+    ...testSans1
+  ],
+  [
+    'Sanskrit Rule 2',
+    ...testSans2
+  ],
   [
     'Rule 1 - Root character can be confirmed at one step match.',
     ...testData1
