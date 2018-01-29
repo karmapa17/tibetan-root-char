@@ -10,7 +10,7 @@
   "author": "kmsheng,chiehan1",
   "license": "MIT",
   "dependencies": {
-    "tibetan-tokenize": "0.0.5"
+    "tibetan-tokenize": "0.0.4"
   },
   "devDependencies": {
     "ava": "0.22.0",
