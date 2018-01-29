@@ -5,6 +5,7 @@ const testSans1 = require('./helpers/testData/testSans1');
 const testSans2 = require('./helpers/testData/testSans2');
 const testData1 = require('./helpers/testData/testData1');
 const testData2_1 = require('./helpers/testData/testData2_1');
+const testData2_2 = require('./helpers/testData/testData2_2');
 const testData3 = require ('./helpers/testData/testData3');
 const testData4_1 = require('./helpers/testData/testData4_1');
 const answers4_2 = require('./helpers/testData/testData4_2');
@@ -38,7 +39,7 @@ function testRule(ruleDescription, testStrs, answers) {
   ],
   [
     'Rule 2-2 - The root character of ལྷ (\\u0f63\\u0fb7) is ཧ (\\u0f67)',
-    ['ལྷའི་རྔ་ཅན།'], ['ཧ']
+    ...testData2_2
   ],
   [
     'Rule 3 - Root is before vowels, subscript, special characters.',

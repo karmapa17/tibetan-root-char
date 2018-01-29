@@ -7,7 +7,9 @@ const sansFeature = /[ༀཊྚཋྛཌྜཎྞཥྵ\u0f43\u0f4d\u0f52\u0f57\
 
 function getTibetanRootChar(str) {
 
-  const dePrefixStr = str.replace(/^(འཕགས་(པ|བ)|དཔལ(?!་གྱི)(་ལྡན)?)་/, '');
+  const cleanStr = str.replace(/^[ ༄༅།]+/, '');
+
+  const dePrefixStr = cleanStr.replace(/^(འཕགས་(པ|བ)|དཔལ(?!་གྱི)(་ལྡན)?)་/, '');
 
   const {tokens: [token]} = tokenize(dePrefixStr);
 
