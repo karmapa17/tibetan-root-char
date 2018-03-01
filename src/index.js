@@ -9,7 +9,7 @@ function getTibetanRootChar(str) {
 
   const cleanStr = str.replace(/^[ ༄༅།]+/, '');
 
-  const dePrefixStr = cleanStr.replace(/^(འཕགས་(པ|བ)|དཔལ(?!་གྱི)(་ལྡན)?)་/, '');
+  const dePrefixStr = cleanStr.replace(/^(འཕག(ས|ྶ)་(པ|བ)|དཔལ(?!་གྱི)(་ལྡན)?)་/, '');
 
   const {tokens: [token]} = tokenize(dePrefixStr);
 
