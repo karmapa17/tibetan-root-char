@@ -1,6 +1,7 @@
 const test = require('ava');
 const tripleCharArr = require('./../src/tripleCharArr');
 const {getRootChar} = require('./../src/');
+const testPrefix = require('./helpers/testData/testPrefix');
 const testSans1 = require('./helpers/testData/testSans1');
 const testSans2 = require('./helpers/testData/testSans2');
 const testData1 = require('./helpers/testData/testData1');
@@ -21,6 +22,10 @@ function testRule(ruleDescription, testStrs, answers) {
 }
 
 [
+  [
+    'Prefix Rule',
+    ...testPrefix
+  ],
   [
     'Sanskrit Rule 1',
     ...testSans1
