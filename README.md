@@ -29,3 +29,4 @@ getRootChar('ཕྱི་དྲོ་བདེ་ལེགས།');    // ཕ
 ## License
 
 MIT © [Dharma Treasure](https://dharma-treasure.org)
+test
